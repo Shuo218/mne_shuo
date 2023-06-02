@@ -53,7 +53,7 @@ for question in questions:
 
 print("Arithmetic test completed!")
 print("Please take a moment to relax while listening to 1 minute of soothing music...")
-play_music("relaxing_music.wav", 60)
+play_music("relaxing_music.wav", 10)
 
 ##print(answers)
 
