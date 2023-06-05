@@ -27,7 +27,7 @@ def play_music(file_path, duration):
 # Music before recording
 print("We will now begin the recording.")
 print("Please take a moment to relax while listening to 2 minute of soothing music.")
-print("Afterward, you will be given 1 minute to answer 10 arithmetic questions. Please answer as many as you can and press enter to go forward.")
+print("Afterward, you will be given 1 minute to answer 10 arithmetic questions. Please answer as many as you can and press ENTER to go forward.")
 print("Please answer each question one by one.")
 
 # Play the music for 1 minute
