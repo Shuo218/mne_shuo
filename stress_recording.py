@@ -32,7 +32,7 @@ print("Please answer each question one by one.")
 
 # Play the music for 1 minute
 start_key = input("If you're ready, press ENTER and enjoy a 1-minute piece of music.")
-play_music("relaxing_music.wav", 60)
+play_music("relaxing_music.wav", 120)
 
 # Set a timer
 question_duration = 60
@@ -40,22 +40,27 @@ question_duration = 60
 #start the timer
 start_time = time.time()
 
+
 # test starts
 test_start = input("The music playback is over, please press ENTER to start answering the question.")
 answers = []
-for question in questions:
-    answer = input(question)
-    ##answers.append(answer)
+while time.time() - start_time < question_duration:
+    for question in questions:
+        answer = input(question)
+        answers.append(answer)
+
+        if time.time() - start_time >= question_duration:
+            print("Time is up.")
+            break
 
     if time.time() - start_time >= question_duration:
-        print("Time is up.")
         break
 
 print("Arithmetic test completed!")
 print("Please take a moment to relax while listening to 1 minute of soothing music...")
-play_music("relaxing_music.wav", 60)
+play_music("relaxing_music.wav", 120)
 
-##print(answers)
+# print(answers)
 
 print("Recording completed!")
 
