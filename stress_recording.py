@@ -26,12 +26,12 @@ def play_music(file_path, duration):
 
 # Music before recording
 print("We will now begin the recording.")
-print("Please take a moment to relax while listening to 1 minute of soothing music.")
+print("Please take a moment to relax while listening to 2 minute of soothing music.")
 print("Afterward, you will be given 1 minute to answer 10 arithmetic questions.")
 print("Please answer each question one by one.")
 
 # Play the music for 1 minute
-start_key = input("If you're ready, press ENTER and enjoy a 1-minute piece of music.")
+start_key = input("If you're ready, press ENTER and enjoy a 2-minute piece of music.")
 play_music("relaxing_music.wav", 120)
 
 # Set a timer
@@ -57,7 +57,7 @@ while time.time() - start_time < question_duration:
         break
 
 print("Arithmetic test completed!")
-print("Please take a moment to relax while listening to 1 minute of soothing music...")
+print("Please take a moment to relax while listening to 2 minute of soothing music...")
 play_music("relaxing_music.wav", 120)
 
 # print(answers)
