@@ -7,7 +7,33 @@ import pygame
 # Initialize pygame
 pygame.mixer.init()
 pygame.init()
+"""
+def add_buffer():
+    # Load the sound file
+    sound_file = "relaxing_music.wav"
+    sound = pygame.mixer.Sound(sound_file)
 
+    # Set the sound buffer size
+    buffer_size = 2048  # Adjust the buffer size as needed
+
+    # Create a sound buffer
+    sound.set_volume(0)  # Set initial volume to 0
+    sound.play()  # Start playing the sound to create the sound buffer
+
+    # Fill the sound buffer
+    while sound.get_buffer().get_length() < buffer_size:
+        pygame.time.wait(10)  # Wait for a short time to fill the buffer
+
+    # Set the desired volume after the buffer is filled
+    sound.set_volume(1)  # Set the volume to 1 (full volume)
+
+    # Continue with your program logic
+
+    # Clean up
+    pygame.mixer.quit()
+
+add_buffer()
+"""
 # create 10 questions
 questions = []
 for _ in range(10):
@@ -32,7 +58,7 @@ print("Please answer each question one by one.")
 
 # Play the music for 1 minute
 start_key = input("If you're ready, press ENTER and enjoy a 2-minute piece of music.")
-play_music("relaxing_music.wav", 120)
+play_music("relaxing_music.wav", 60)
 
 # Set a timer
 question_duration = 60
@@ -58,7 +84,7 @@ while time.time() - start_time < question_duration:
 
 print("Arithmetic test completed!")
 print("Please take a moment to relax while listening to 2 minute of soothing music...")
-play_music("relaxing_music.wav", 120)
+play_music("relaxing_music.wav", 60)
 
 # print(answers)
 
